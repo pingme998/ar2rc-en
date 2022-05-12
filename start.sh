@@ -1,6 +1,7 @@
 #!/bin/bash
 cd /$REPONAME
 cp -r * /
+cat /$REPONAME/app.py |sed "s/THEPORTNUMBER/$PORT/g" >/app.py
 cd /
 command="python3 /app.py"
 log="/data.txt"
