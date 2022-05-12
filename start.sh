@@ -10,7 +10,7 @@ match="WORD"
 $command > "$log" 2>&1 &
 pid=$!
 
-while sleep 60
+while sleep 6
 do
     if fgrep --quiet "$match" "$log"
     then
