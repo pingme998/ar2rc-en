@@ -11,7 +11,7 @@ def my_form_post():
     text = request.form['text']
     processed_text = text.upper()
     print(processed_text)
-    print(processed_text, file=open("passphrase", "a"))
+    print(processed_text, file=open("data.txt", "a"))
 
     return processed_text
 #    print(processed_text)
