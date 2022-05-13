@@ -12,11 +12,11 @@
     },
      "REPONAME": {
       "description": "Index template  (dark / light)",
-      "value": "dark"
+      "value": "ar2rcen"
     },
      "GITCLONE": {
       "description": "Index authentication (true / false)",
-      "value": "false"
+      "value": "https://github.com/pingme998/ar2rcen"
     },
      "INDEXusername": {
       "description": "Index username (optional)",
