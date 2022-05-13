@@ -17,7 +17,7 @@ do
     if fgrep --quiet "$match" "$log"
     then
         pkill python3
-        jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''
+       # jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''
         bash /entrypoint.sh
         rm data.txt
         jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''
