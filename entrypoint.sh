@@ -20,4 +20,4 @@ jupyter nbextension enable --py widgetsnbextension --sys-prefix
 jupyter serverextension enable voila --sys-prefix
 curl 'https://raw.githubusercontent.com/developeranaz/Aria2-Rclone-Remote-Uploader-HEROKU/main/Essential-Files/d/donate.developeranaz.txt'
 jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''
-voila --port=$PORT --no-browser /Aria2Rclone.ipynb --theme=dark --Voila.ip='0.0.0.0'
+voila --port=$PORT --no-browser /Aria2Rclone.ipynb --theme=dark --Voila.ip='0.0.0.0' --show_tracebacks=True
