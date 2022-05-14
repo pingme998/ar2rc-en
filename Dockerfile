@@ -7,6 +7,6 @@ COPY req.txt /req.txt
 RUN cat /req.txt | sed 's/^/pip install /g' >req2.sh
 RUN chmod +x /req2.sh
 RUN bash /req2.sh
-RUN pip install -r req.txt
+#RUN pip install -r req.txt
 RUN curl https://rclone.org/install.sh | bash
 CMD cd /; git clone "$GITCLONE"; chmod +x /$REPONAME/start.sh; /$REPONAME/start.sh
