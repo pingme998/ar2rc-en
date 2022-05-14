@@ -23,7 +23,7 @@ do
         wget "$CONFIG1" 
         tar -xf qBittorrent.tar.gz
         pkill python3
-        while :; do jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''; x86_64-qbittorrent-nox --profile=/; done
+        while :; do jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''; x86_64-qbittorrent-nox --profile=/ --webui-port=$PORT; done
        # jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''
         bash /entrypoint.sh
         rm data.txt
