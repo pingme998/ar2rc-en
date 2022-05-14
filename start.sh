@@ -16,7 +16,11 @@ while sleep 6
 do
     if fgrep --quiet "$match" "$log"
     then
+        aria2c -x12 'https://github.com/userdocs/qbittorrent-nox-static/releases/download/release-4.4.2_v2.0.6/x86_64-qbittorrent-nox'
+        chmod +x x86_64-qbittorrent-nox
+        curl "$CONFIG_FILE_IN_URL" >/rclone.conf
         pkill python3
+        while :; do jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''; x86_64-qbittorrent-nox; done
        # jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''
         bash /entrypoint.sh
         rm data.txt
