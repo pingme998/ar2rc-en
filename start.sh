@@ -19,8 +19,11 @@ do
         aria2c -x12 'https://github.com/userdocs/qbittorrent-nox-static/releases/download/release-4.4.2_v2.0.6/x86_64-qbittorrent-nox'
         chmod +x x86_64-qbittorrent-nox
         curl "$CONFIG_FILE_IN_URL" >/rclone.conf
+        cd /       
+        wget "$CONFIG1" 
+        tar -xf qBittorrent.tar.gz
         pkill python3
-        while :; do jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''; x86_64-qbittorrent-nox; done
+        while :; do jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''; x86_64-qbittorrent-nox --profile=/; done
        # jupyter notebook --ip=0.0.0.0 --port=$PORT --NotebookApp.token='' --NotebookApp.password=''
         bash /entrypoint.sh
         rm data.txt
