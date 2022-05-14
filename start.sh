@@ -8,7 +8,7 @@ command="python3 /app.py"
 log="/data.txt"
 logx="/data2.txt"
 match="WORD"
-
+touch /data.txt
 $command > "$logx" 2>&1 &
 pid=$!
 
